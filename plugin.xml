@@ -48,7 +48,7 @@
     <framework src="libz.dylib" />
     <framework src="libsqlite3.dylib" />
 
-    <framework src="GoogleToolboxForMac" type="podspec" spec="~> 2.1.4"/>
+    <!-- <framework src="GoogleToolboxForMac" type="podspec" spec="~> 2.1.4"/> -->
   </platform>
 
   <platform name="android">
