@@ -42,12 +42,12 @@
     <header-file src="ios/GAIEcommerceProductAction.h" />
     <header-file src="ios/GAIEcommercePromotion.h" />
 
-    <framework src="SystemConfiguration.framework" />
+    <!-- <framework src="SystemConfiguration.framework" />
     <framework src="CoreData.framework" />
-    <!-- <framework src="AdSupport.framework" /> -->
+   <framework src="AdSupport.framework" /> 
     <framework src="libz.dylib" />
-    <!-- <framework src="libsqlite3.dylib" /> -->
-    <framework src="libsqlite3.0.dylib" />
+     <framework src="libsqlite3.dylib" />  -->
+  
 
 
     <!-- <framework src="GoogleToolboxForMac" type="podspec" spec="~> 2.1.4"/> -->
