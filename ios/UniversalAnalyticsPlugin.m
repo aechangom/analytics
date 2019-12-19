@@ -2,9 +2,15 @@
 //Created by Daniel Wilson 2013-09-19
 
 #import "UniversalAnalyticsPlugin.h"
-#import "GAI.h"
-#import "GAIDictionaryBuilder.h"
-#import "GAIFields.h"
+//#import "GAI.h"
+//#import "GAIDictionaryBuilder.h"
+//#import "GAIFields.h"
+
+#import <GoogleAnalytics/GAI.h>
+#import <GoogleAnalytics/GAIDictionaryBuilder.h>
+#import <GoogleAnalytics/GAIFields.h>
+
+
 
 @implementation UniversalAnalyticsPlugin
 
