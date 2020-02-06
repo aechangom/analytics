@@ -30,22 +30,24 @@ function runModifyManifest(context) {
             }
 
             var result = '';
-            let pluginDiagnosticLocation = 'android:name="cordova.plugins.Diagnostic$LocationProviderChangedReceiver"';
-            let pluginDiagnosticNFCS = 'android:name="cordova.plugins.Diagnostic$NFCStateChangedReceiver"';
-            let androidExported = 'android:exported="false"';
-            if (data.indexOf(pluginDiagnosticLocation + ' ' + androidExported) === -1) {
+            let pluginDiagnosticLocation = '<receiver android:name="cordova.plugins.Diagnostic$LocationProviderChangedReceiver">';
+            let pluginDiagnosticLocationFull = '<receiver android:name="cordova.plugins.Diagnostic$LocationProviderChangedReceiver" android:exported="false">';
+            if (data.indexOf(pluginDiagnosticLocationFull) === -1) {
                 if (data.indexOf(pluginDiagnosticLocation) != -1) {
                     console.log("pluginDiagnosticLocation se cambiara exported a false");
-                    result = data.replace(pluginDiagnosticLocation, pluginDiagnosticLocation + ' ' + androidExported);
+                    result = data.replace(pluginDiagnosticLocation, pluginDiagnosticLocationFull);
                 }
             }
-            if (data.indexOf(pluginDiagnosticNFCS + ' ' + androidExported) === -1) {
-                if (data.indexOf(pluginDiagnosticNFCS) != -1) {
+
+            let pluginDiagnosticNFCState = '<receiver android:name="cordova.plugins.Diagnostic$NFCStateChangedReceiver">';
+            let pluginDiagnosticNFCStateFull = '<receiver android:name="cordova.plugins.Diagnostic$NFCStateChangedReceiver" android:exported="false">';
+            if (data.indexOf(pluginDiagnosticNFCStateFull) === -1) {
+                if (data.indexOf(pluginDiagnosticNFCState) != -1) {
                     console.log("pluginDiagnosticNFCS se cambiara exported a false");
                     if (result != '') {
-                    	result = result.replace(pluginDiagnosticNFCS, pluginDiagnosticNFCS + ' ' + androidExported);
+                        result = result.replace(pluginDiagnosticNFCState, pluginDiagnosticNFCStateFull);
                     } else {
-                    	result = data.replace(pluginDiagnosticNFCS, pluginDiagnosticNFCS + ' ' + androidExported);
+                        result = data.replace(pluginDiagnosticNFCState, pluginDiagnosticNFCStateFull);
                     }
                 }
             }

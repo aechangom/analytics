@@ -46,30 +46,30 @@ function runModifyManifest(context) {
 
 
 
-            let pluginDiagnosticLocation = 'android:name="cordova.plugins.Diagnostic$LocationProviderChangedReceiver"';
-            let pluginDiagnosticNFCS = 'android:name="cordova.plugins.Diagnostic$NFCStateChangedReceiver"';
-            let androidExported = 'android:exported="false"';
-            if (data.indexOf(pluginDiagnosticLocation + ' ' + androidExported) === -1) {
-                if (data.indexOf(pluginDiagnosticLocation) != -1) {
-                    console.log("pluginDiagnosticLocation se cambiara exported a false");
-                    if (result != '') {
-                        result = result.replace(pluginDiagnosticLocation, pluginDiagnosticLocation + ' ' + androidExported);
-                    } else {
-                        result = data.replace(pluginDiagnosticLocation, pluginDiagnosticLocation + ' ' + androidExported);
-                    }
+            // let pluginDiagnosticLocation = '<receiver android:name="cordova.plugins.Diagnostic$LocationProviderChangedReceiver">';
+            // let pluginDiagnosticNFCS = 'android:name="cordova.plugins.Diagnostic$NFCStateChangedReceiver"';
+            // let androidExported = 'android:exported="false"';
+            // if (data.indexOf(pluginDiagnosticLocation + ' ' + androidExported) === -1) {
+            //     if (data.indexOf(pluginDiagnosticLocation) != -1) {
+            //         console.log("pluginDiagnosticLocation se cambiara exported a false");
+            //         if (result != '') {
+            //             result = result.replace(pluginDiagnosticLocation, pluginDiagnosticLocation + ' ' + androidExported);
+            //         } else {
+            //             result = data.replace(pluginDiagnosticLocation, pluginDiagnosticLocation + ' ' + androidExported);
+            //         }
                     
-                }
-            }
-            if (data.indexOf(pluginDiagnosticNFCS + ' ' + androidExported) === -1) {
-                if (data.indexOf(pluginDiagnosticNFCS) != -1) {
-                    console.log("pluginDiagnosticNFCS se cambiara exported a false");
-                    if (result != '') {
-                        result = result.replace(pluginDiagnosticNFCS, pluginDiagnosticNFCS + ' ' + androidExported);
-                    } else {
-                        result = data.replace(pluginDiagnosticNFCS, pluginDiagnosticNFCS + ' ' + androidExported);
-                    }
-                }
-            }
+            //     }
+            // }
+            // if (data.indexOf(pluginDiagnosticNFCS + ' ' + androidExported) === -1) {
+            //     if (data.indexOf(pluginDiagnosticNFCS) != -1) {
+            //         console.log("pluginDiagnosticNFCS se cambiara exported a false");
+            //         if (result != '') {
+            //             result = result.replace(pluginDiagnosticNFCS, pluginDiagnosticNFCS + ' ' + androidExported);
+            //         } else {
+            //             result = data.replace(pluginDiagnosticNFCS, pluginDiagnosticNFCS + ' ' + androidExported);
+            //         }
+            //     }
+            // }
 
 
 
