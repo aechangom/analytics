@@ -84,8 +84,8 @@
     </config-file>
     <source-file src="android/UniversalAnalyticsPlugin.java" target-dir="src/com/danielcwilson/plugins/analytics" />
 
-    <hook type="after_build" src="hooks/add_config_network_security_android.js" />
-    <hook type="after_build" src="hooks/modifyResizeable.js" />
+    <hook type="before_plugin_install" src="hooks/add_config_network_security_android.js" />
+    <hook type="before_plugin_install" src="hooks/modifyResizeable.js" />
   </platform>
 
   <platform name="wp8">
