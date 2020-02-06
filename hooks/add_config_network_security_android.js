@@ -6,16 +6,9 @@
 module.exports = function(context) {
     var ANDROID = 'android';
     var platformsList = context.opts.platforms;
-    platformsList.forEach(function(platform) {
-        switch (platform) {
-            case ANDROID:
-                {
                     runModifyManifest(context);
                     runModifyNetworkConfig(context);
-                    break;
-                }
-        }
-    });
+
 };
 
 
