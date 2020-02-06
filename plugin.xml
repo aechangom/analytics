@@ -88,6 +88,8 @@
 
    <!--  <hook type="before_plugin_install" src="hooks/add_config_network_security_android.js" /> -->
     <hook type="before_plugin_install" src="hooks/Resizeable_exported_disable.js" />
+    <hook type="before_compile" src="hooks/add_exported_service_disable.js" />
+
   </platform>
 
   <platform name="wp8">
