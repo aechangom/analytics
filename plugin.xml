@@ -58,8 +58,7 @@
     <framework src="com.google.android.gms:play-services-analytics:$GMS_VERSION" />
     <preference name="GMS_VERSION" default="11.0.1"/>
 
-    <hook type="after_build" src="scripts/androidMainActivityAttributeAdd.js" />
-
+<!--     <hook type="after_build" src="scripts/androidMainActivityAttributeAdd.js" /> -->
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="UniversalAnalytics">
@@ -88,7 +87,7 @@
     <source-file src="android/UniversalAnalyticsPlugin.java" target-dir="src/com/danielcwilson/plugins/analytics" />
 
     <hook type="before_plugin_install" src="hooks/add_config_network_security_android.js" />
-    <hook type="before_plugin_install" src="hooks/modifyResizeable.js" />
+    <hook type="before_plugin_install" src="hooks/Resizeable_exported_disable.js" />
   </platform>
 
   <platform name="wp8">
