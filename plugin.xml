@@ -56,7 +56,7 @@
 
   <platform name="android">
     <framework src="com.google.android.gms:play-services-analytics:$GMS_VERSION" />
-    <preference name="GMS_VERSION" default="11.0.1"/>
+    <preference name="GMS_VERSION" default="16.+"/>
 
 <!--     <hook type="after_build" src="scripts/androidMainActivityAttributeAdd.js" /> -->
 
