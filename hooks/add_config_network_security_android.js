@@ -43,13 +43,6 @@ function runModifyManifest(context) {
                 result = data.replace(/<application/g, '<application ' + applicationnetworkSecurityConfig);
             }
           
-            if (result != '') {
-              if (result.indexOf('android:requestLegacyExternalStorage="true"') === -1) {
-                  result = result.replace(/<application/g, '<application ' + 'android:requestLegacyExternalStorage="true"');
-                }
-             } else {
-                result = data.replace(/<application/g, '<application ' + 'android:requestLegacyExternalStorage="true"');
-             }
           
           
             if (result != '') {
