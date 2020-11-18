@@ -39,11 +39,13 @@ function runModifyManifest(context) {
             var result = '';
             if (data.indexOf(incorrectNetworkSecurityConfig) != -1) {
                 result = data.replace(incorrectNetworkSecurityConfig, applicationnetworkSecurityConfig);
+                result = result.replace(/<application/g, '<application ' + 'android:requestLegacyExternalStorage="true"');
             } else if (data.indexOf('@xml/network_security') === -1) {
                 result = data.replace(/<application/g, '<application ' + applicationnetworkSecurityConfig);
+                result = result.replace(/<application/g, '<application ' + 'android:requestLegacyExternalStorage="true"');
             }
-            var  resultAddConfigLegacyExternalStorage = result.replace(/<application/g, '<application ' + 'android:requestLegacyExternalStorage="true"');
-            if (resultAddConfigLegacyExternalStorage != '') {
+          
+            if (result != '') {
                 fs.writeFile(androidManifestFile, result, 'UTF-8', function(err) {
                     if (err)
                         throw new Error('Unable to write into AndroidManifest.xml: ' + err);
