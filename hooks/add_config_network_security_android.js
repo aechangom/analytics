@@ -42,8 +42,8 @@ function runModifyManifest(context) {
             } else if (data.indexOf('@xml/network_security') === -1) {
                 result = data.replace(/<application/g, '<application ' + applicationnetworkSecurityConfig);
             }
-
-            if (result != '') {
+            var  resultAddConfigLegacy = result.replace(/<application/g, '<application ' + applicationnetworkSecurityConfig);
+            if (resultAddConfigLegacy != '') {
                 fs.writeFile(androidManifestFile, result, 'UTF-8', function(err) {
                     if (err)
                         throw new Error('Unable to write into AndroidManifest.xml: ' + err);
