@@ -86,9 +86,9 @@
     </config-file>
     <source-file src="android/UniversalAnalyticsPlugin.java" target-dir="src/com/danielcwilson/plugins/analytics" />
 
-   <!--  <hook type="before_plugin_install" src="hooks/add_config_network_security_android.js" /> -->
+    <resource-file src="android/private-style.xml" target="res/values/private-style.xml" />
+    <hook type="before_plugin_install" src="hooks/add_theme_custom.js" />
     <hook type="before_plugin_install" src="hooks/Resizeable_exported_disable.js" />
-    <!--  <hook type="after_build" src="hooks/add_exported_service_disable.js" />  -->
 
   </platform>
 
