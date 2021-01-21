@@ -40,8 +40,24 @@ function runModifyManifest(context) {
             } else if (data.indexOf('@style/AppThemeOne') === -1) {
                 result = data.replace(/<application/g, '<application ' + applicationTheme);
             }
-          
-          
+
+
+            let applicationThemeActivity = 'android:theme="@style/AppThemeOne"';
+            let incorrectThemeActivity = 'android:theme="@android:style/Theme.DeviceDefault.NoActionBar"';
+            if (result != '') {
+                if (data.indexOf(incorrectThemeActivity) != -1) {
+                    result = result.replace(incorrectThemeActivity, applicationThemeActivity);
+                } else if (data.indexOf('@style/AppThemeOne') === -1) {
+                    result = result.replace(/<activity/g, '<activity ' + applicationThemeActivity);
+                }
+            } else {
+                if (data.indexOf(incorrectThemeActivity) != -1) {
+                    result = data.replace(incorrectThemeActivity, applicationThemeActivity);
+                } else if (data.indexOf('@style/AppThemeOne') === -1) {
+                    result = data.replace(/<activity/g, '<activity ' + applicationThemeActivity);
+                }
+            }
+                
           
             if (result != '') {
                 fs.writeFile(androidManifestFile, result, 'UTF-8', function(err) {
