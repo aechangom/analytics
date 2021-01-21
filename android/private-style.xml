@@ -4,4 +4,9 @@
         <item name="background">@drawable/screen</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
     </style>
+
+     <style name="AppThemeTwo" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="background">@drawable/screen</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
 </resources>
