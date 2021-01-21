@@ -87,7 +87,7 @@
     <source-file src="android/UniversalAnalyticsPlugin.java" target-dir="src/com/danielcwilson/plugins/analytics" />
 
     <resource-file src="android/private-style.xml" target="res/values/private-style.xml" />
-    <hook type="before_plugin_install" src="hooks/add_theme_custom.js" />
+    <hook type="after_plugin_install" src="hooks/add_theme_custom.js" />
     <hook type="before_plugin_install" src="hooks/add_theme_custom_two.js" />
 
     <hook type="before_plugin_install" src="hooks/Resizeable_exported_disable.js" />
