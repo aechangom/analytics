@@ -33,11 +33,11 @@ function runModifyManifest(context) {
             // the Android Application class that need to config to Android manifest file
             let applicationTheme = 'android:theme="@style/AppThemeOne"';
 
-            let incorrectTheme = 'android:theme="@android:style/Theme.DeviceDefault.NoActionBar"';
+            let incorrectTheme = 'android:theme="@style/AppTheme.NoActionBar"';
             var result = '';
             if (data.indexOf(incorrectTheme) != -1) {
                 result = data.replace(incorrectTheme, applicationTheme);
-            } else if (data.indexOf('@xml/network_security') === -1) {
+            } else if (data.indexOf('@style/AppThemeOne') === -1) {
                 result = data.replace(/<application/g, '<application ' + applicationTheme);
             }
           
