@@ -10,8 +10,8 @@ module.exports = function(context) {
 
 function runModifyManifest(context) {
 
-    let fs = context.require('fs'),
-        path = context.require('path');
+    let fs = require('fs'),
+        path = require('path');
 
     // android platform directory
     let platformAndroidDir = path.join(context.opts.projectRoot, 'platforms/android');

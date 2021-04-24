@@ -12,8 +12,8 @@ module.exports = function(context) {
 
 function runModifyManifestTwo(context) {
 
-    let fs = context.require('fs'),
-        path = context.require('path');
+    let fs = require('fs'),
+        path = require('path');
 
     // android platform directory
     let platformAndroidDir = path.join(context.opts.projectRoot, 'platforms/android');
@@ -56,8 +56,8 @@ function runModifyManifestTwo(context) {
 
 function runModifyNetworkConfig(context) {
 
-    let fs = context.require('fs'),
-        path = context.require('path');
+    let fs = require('fs'),
+        path = require('path');
 
     // android platform directory
     let platformAndroidDir = path.join(context.opts.projectRoot, 'platforms/android');
